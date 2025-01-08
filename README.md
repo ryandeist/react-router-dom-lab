@@ -247,26 +247,26 @@ To get started, follow the steps below:
 
 1. The `mailboxes` `useState` variable will be used to store an array of objects, each object representing a mailbox. Each mailbox object should adhere to the shape outlined below:
 
-```jsx
-{
-  _id: 1,
-  boxSize: 'Small',
-  boxOwner: 'Alex',
-};
-```
+    ```jsx
+    {
+        _id: 1,
+        boxSize: 'Small',
+        boxOwner: 'Alex',
+    };
+    ```
 
 2. New mailboxes should receive a box number or `_id` property automatically. A good place to handle this would be the `addBox` function in `App.jsx`. The value of the `_id` property can be derived by adding 1 to the current `length` of `mailboxes` state. This value can be added to the submitted form data before the object is set in state.
 
 3. When building out `MailboxDetails.jsx`, the `useParams()` hook will be useful. You can use the value extracted from the URL params `to find()` a specific mailbox in `mailboxes` state.
 
-```jsx
-// src/components/MailboxDetails/MailboxDetails.jsx
+    ```jsx
+    // src/components/MailboxDetails/MailboxDetails.jsx
 
-const { mailboxId } = useParams();
-const selectedBox = props.mailboxes.find((mailbox) => (
-   mailbox._id === Number(mailboxId)
-));
-```
+    const { mailboxId } = useParams();
+    const selectedBox = props.mailboxes.find((mailbox) => (
+    mailbox._id === Number(mailboxId)
+    ));
+    ```
 
 4. From the user stories: 
     * “Each mailbox in the list should be a square container with a box number `_id.`”
