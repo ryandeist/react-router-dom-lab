@@ -96,3 +96,69 @@ git init
 git add .
 git commit -m "init commit"
 ```
+
+Make a new repository on GitHub named `react-router-dom-lab`.
+
+Link your local project to your remote GitHub repo:
+
+```
+git remote add origin https://github.com/<github-username>/react-router-dom-lab.git
+git push origin main
+```
+> Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>`(including the `<` and `>`) in the URL above.
+
+## Adding CSS starter code
+Styling is not a requirement for this lab, but feel free to develop the final look of this application as you see fit. Below, you will find some basic CSS to get you started.
+
+Add the following to the bottom of `src/index.css`:
+
+```css
+/* src/index.css */
+
+body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-right: 16px;
+}
+
+.mail-box {
+  border: 2px solid white;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+button {
+  margin: 16px 0px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+}
+
+button {
+  background-color: #535bf2;
+}
+```
