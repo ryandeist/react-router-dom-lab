@@ -9,13 +9,15 @@ const MailboxDetails = (props) => {
 
     return (
         <main>
-            <h1>Mailbox {mailboxId}</h1>
-            <dl>
-                <h2>Name:</h2>
-                <p>{viewedMailbox.name}</p>
-                <h2>Size:</h2>
-                <p>{viewedMailbox.size}</p>
-            </dl>
+            {!viewedMailbox ? <h1>Mailbox Not Found</h1> : <>
+                <h1>Mailbox {mailboxId}</h1>
+                <dl>
+                    <h2>Name:</h2>
+                    <p>{viewedMailbox.boxOwner}</p>
+                    <h2>Size:</h2>
+                    <p>{viewedMailbox.boxSize}</p>
+                </dl>
+            </>}
             <Link to="/mailboxes">Back to Mailboxes</Link>
         </main>
     )

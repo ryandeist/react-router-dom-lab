@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router';
 import { useState } from 'react';
 
 const App = () => {
-  const [mailboxes, setMailboxes] = useState([{_id: 1, name: 'Ryans Mailbox', size: 'small'}]);
+  const [mailboxes, setMailboxes] = useState([]);
 
   const addMailbox = (newMailboxData) => {
     newMailboxData._id = mailboxes.length + 1;
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes}/>} /> 
           <Route path="/new-mailbox" element={<MailboxForm addMailbox={addMailbox} />} /> 
           <Route path="/mailboxes/:mailboxId" element={<MailboxDetails mailboxes={mailboxes} />} /> 
-          <Route path="*" element={<main><h1>Not Found</h1></main>} />
+          <Route path="*" element={<main><h1>Mailbox Not Found</h1></main>} />
         </Routes>
       </main>
     </>
