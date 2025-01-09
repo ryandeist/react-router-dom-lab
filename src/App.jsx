@@ -20,9 +20,9 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<main><h1>Post Office</h1></main>} />
-          <Route path="/mailboxes" element={<MailboxList />} /> 
-          <Route path="/new-mailbox" element={<MailboxForm />} /> 
-          <Route path="/mailboxes/:mailboxId" element={<MailboxDetails />} /> 
+          <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes}/>} /> 
+          <Route path="/new-mailbox" element={<MailboxForm addMailbox={addMailbox} />} /> 
+          <Route path="/mailboxes/:mailboxId" element={<MailboxDetails mailboxes={mailboxes} />} /> 
           <Route path="*" element={<main><h1>Not Found</h1></main>} />
         </Routes>
       </main>
